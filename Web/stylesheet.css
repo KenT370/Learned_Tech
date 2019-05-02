@@ -1,0 +1,86 @@
+
+h1 {
+    color:red;
+    background-color: black;
+}
+
+h2 {
+    color:blue;
+    background-color:black;
+}
+
+h3 {
+    color:orange;
+    background-color: black;
+}
+
+img {
+    box-shadow: 10px 10px 10px grey;
+}
+
+section {
+    background-color: tan;
+
+}
+
+p {
+    font-size: 20px;
+}
+
+ul {
+    border-style: ridge;
+}
+
+/* Selecting Specific Elements on the Webpage */
+#blue {
+    color:blue;
+    background-color: white;
+}
+
+.Diff {
+    color:purple;
+    background-color: white;
+}
+
+#red {
+    color:red;
+    background-color: white;
+}
+
+#blue,
+#red {
+    font-size: 40px;
+}
+
+/* Aimed Positioning */
+
+#center {
+    position: absolute;
+    top:50%;
+    left: 45%;
+
+}
+
+#under {
+    position: absolute;
+    top: 55%;
+    left: 46.5%;
+}
+
+#left {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+ #bottom {
+     position: absolute;
+     right:0;
+     bottom:0;
+ }
+
+ #centerL {
+     position: absolute;
+     top: 50%;
+     left: 0;
+ }

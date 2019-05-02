@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = 'us'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Max and Min Temps for Costa Rica</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+  
+  </head>
+  <body>
+   
+    <header>
+
+      
+
+      <div class="view intro-2" style="">
+        <div class="full-bg-img">
+          <div class="mask rgba-purple-light flex-center">
+            <div class="container text-center white-text wow fadeInUp">
+              
+              <h1>The Current Weather Temperatures for Costa Rica</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </header>
+    <!--Main Navigation-->
+    
+    <!--Main Layout-->
+    <main class="text-center py-5">
+    <div class "container">
+      <div class='jumbotron text-center'>
+        <h1>Find the Current Max + Min Temp</h1>
+        <p><a class='btn btn-primary btn-lg' href='/scrape' role='button'>Click Here to Update</a></p>
+      </div>
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            
+            <p>The Max Temperature: {{dict.max}}.  The Min Temperature: {{dict.min}}</p>
+            
+
+          </div>
+        </div>
+      </div>
+    
+    </main>
+    
+  
+  </body>
+</html>
