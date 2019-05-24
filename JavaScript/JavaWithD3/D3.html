@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='D3_style.css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  
+  <style>
+  
+  .jumbotron{
+    background: #000000 url('starwars.gif') no-repeat bottom left;
+    background-size: 100% 100%;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+
+  </head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Student Grades -->
+        <table class="grades">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody class = 'grade'>
+            <tr>
+              <td>Malcolm</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>Zoe</td>
+              <td>85</td>
+            </tr>
+            <tr>
+              <td>Kaylee</td>
+              <td>99</td>
+            </tr>
+            <tr>
+              <td>Simon</td>
+              <td>99</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class='weather'>
+            <thead>
+              <tr>
+                <th>Weekday</th>
+                <th>Date</th>
+                <th>High</th>
+                <th>Low</th>
+              </tr>
+            </thead>
+            <tbody class = 'weather_data'></tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for='text'>Input Text: </label>
+    <input id="input-field" type="text">
+  </div>
+  <h1 class="output"></h1>
+
+  <ul id = 'list'>
+  </ul>
+
+  <div class = 'container'>
+    <div class = 'jumbotron' style='text-align:center'>
+      <h2>Vote for Your Favorite Star Wars Episode</h2>
+      <h3>Episode: <span class = 'star-wars'></span></h3> 
+      <div class='row-star'>
+        <div class='col-md-offset-4 col-md-4'>
+          <button type='button' id='up' class='btn btn-default btn-lg upvote'>
+            <span class='glyphicon glyphicon-circle-arrow-up'></span>Upvote
+          </button>
+          <button type='button' id = 'down' class='btn btn-default btn-lg downvote'>
+            <span class='glyphicon glyphicon-circle-arrow-down'></span>Downvote
+          </button> 
+          <button type='button' id = 'done' class='btn btn-default btn-lg downvote'>
+            Done Voting! Check Console!
+          </button> 
+        </div>
+
+      </div>   
+    </div>
+  </div>
+
+  <div id='stars'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <div class="form-group">
+            <label for="patient-form">Filter Patient Data by Blood Type</label>
+            <input class="form-control" id="patient-form-input" name="patient-form" type="text" placeholder="AB-">
+          </div>
+          <button id="submit" type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Filtered Data Summary</h1>
+        <ul class = 'stats'>
+
+        </ul>
+        <table class='patient'>
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Age</th>
+              <th>Blood Type</th>
+            </tr>
+          </thead>
+
+          <tbody class='patient_data'>
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+ 
+
+</body>
+<script src="D3_extraData.js"></script>
+<script src="javawithD3.js"></script>
+
+</html>

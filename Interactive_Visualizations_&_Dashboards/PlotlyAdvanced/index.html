@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id='one'></div>
+        <select id="selDataset" onchange="getData(this.value)">
+            <option value='Streaming'>Streaming Services</option>
+            <option value='coding'>Coding Languages</option>
+            <option value='podcast'>Podcasts</option>
+        </select>
+        <br><br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+        <form class = 'form-inline'>
+            <div class = 'form-group'>
+                <input id ='stock' type='text' placeholder='Enter a Stock' onkeypress="return searchKeyPress(event)"/>
+                <input type='button' id = 'stockbox' onclick='stockpick(stock.value)' value = 'Submit'/>
+            </div>    
+        </form>
+        <div id = 'two'></div>
+        <br><br>
+        <form class = 'form-inline'>
+           <div class ='form-group mx-sm-3 mb-2'>
+                <input type='text' class='form-control' id='stock2' placeholder='Enter a Stock Symbol'>
+            </div>
+            <button id='stockbutton2' type='submit' class='btn btn-primary mb-2'>Submit</button>
+        </form>
+        <div id = 'three'></div>
+        
+        <div class = 'container'>
+            <div class ='row justify-content-lg-center'>
+                <div class = 'col-12'>
+                    <h1 class='text-center'>Stock/Company Summary</h1>
+                </div>
+            </div>
+            <br><br>
+            <div class = 'row align-items-center'>
+                <div class='col-4 align-self-start'>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum mi lorem, et varius urna ornare nec. Ut vehicula, ligula vitae convallis rutrum, mauris enim tincidunt tellus, sit amet vulputate diam ante ut turpis. Sed neque risus, euismod pulvinar leo id, feugiat condimentum tortor. Pellentesque ligula sapien, tempor nec egestas a, interdum a ipsum. Aliquam et ultrices nisi, faucibus iaculis urna. Donec iaculis ex et enim venenatis egestas. Donec at consequat mi. Etiam ac pulvinar orci. Donec at sollicitudin nunc. Maecenas porttitor vitae ante at interdum. Nulla mauris justo, dignissim quis euismod ut, mollis a erat. Proin commodo pretium risus, vel congue lectus pretium at. Donec eros dolor, mollis sit amet justo eget, maximus faucibus arcu. Vestibulum nec feugiat odio, id vehicula sem. Aenean bibendum eleifend tincidunt. Fusce in diam ullamcorper, vulputate sapien sagittis, rhoncus urna.</p>
+                </div>
+                <div class = 'col-8'>
+                <table class='table table-dark'>
+                <thead>
+                    <tr>
+                        <th scope='col'>Date</th>
+                        <th scope='col'>Open</th>
+                        <th scope='col'>High</th>
+                        <th scope='col'>Low</th>
+                        <th scope='col'>Close</th>
+                    </tr>
+                </thead>
+                <tbody id = 'table'>
+
+                </tbody>
+            </table>
+        </div>
+        </div>
+        </div>
+    
+        <script src="plot.js"></script>
+    </body>
+</html>
+

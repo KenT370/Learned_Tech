@@ -1,3 +1,8 @@
+''' Flask app that connects to scrape_costa.py that scrapes data from 
+two different websites and pulls the data into a MongoDB.  The Flask
+App then pulls the data from the MongoDB and pushes it to the index.html
+to display the data on a webpage 
+'''
 
 
 

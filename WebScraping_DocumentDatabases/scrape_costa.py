@@ -1,22 +1,25 @@
+# Connected to app.py, scrapes data from craiglist and Visit Costa Rica
+
+
 from bs4 import BeautifulSoup as bs
 import requests
 
 def scrape_info():
 
     url = 'https://visitcostarica.herokuapp.com/index.html'
-
+    url2 = 'https://visitcostarica.herokuapp.com/'
     response = requests.get(url)
 
     soup = bs(response.text,'html.parser')
 
     # Link for Image (still needs work)
-    for link in soup.find_all('img',class_='img-fluid animals'):
-        img = link['src']
-        break
+    rel_img_path = soup.find_all('img')[2]['src']
+    sloth_img = url2 + rel_img_path
     # Image
-    
+
     for val in soup.find_all('div',id='weather'):
         temp_dict = {
+            'img':sloth_img,
             'max':val.find_all('strong')[1].text,
             'min':val.find_all('strong')[0].text
         }
