@@ -1,0 +1,3 @@
+[submodule "Interactive_Visualizations_&_Dashboards/Plotly&Flask/PetsPals"]
+	path = Interactive_Visualizations_&_Dashboards/Plotly&Flask/PetsPals
+	url = https://git.heroku.com/petslocate.git
