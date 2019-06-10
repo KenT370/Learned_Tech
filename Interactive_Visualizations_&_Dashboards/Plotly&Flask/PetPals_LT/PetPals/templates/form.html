@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Map of All Dogs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body id = 'page-top'>
+        <!--Navigation-->
+        <nav class='navbar navbar-inverse'>
+            <div class='container-fluid'>
+                <div class='navbar-header'>
+                    <a class='navbar-brand' href='/'>Pet Tracker</a>
+                </div>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li><a href='/send'><span class='glyphicon glyphicon-dog'></span> Enter New Pet Location</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Form-->
+        <div class="d-flex justify-content-center container">
+            <form method = 'POST' action='/send'>
+                    Pet's Name:<br>
+                <input type='text' class = 'form-control align-middle' placeholder='Max' name='petname'><br>
+                    Latitude:<br>
+                <input type='text' class = 'form-control align-middle' placeholder='36.1699'name='Latitude'><br>
+                    Longitude:<br>
+                <input type='text' class='form-control align-middle' placeholder='-115.1398' name='Longitude'><br><br>
+                <input type='submit'class='btn btn-success align-middle' value='Submit!'>
+            </form>
+        </div>
+       </body>
+</html>
+

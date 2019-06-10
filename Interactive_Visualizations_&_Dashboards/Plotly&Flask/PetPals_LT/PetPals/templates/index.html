@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Map of All Dogs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel='stylesheet' href='/CSS/style.css'>
+    </head>
+    <body id = 'page-top'>
+
+        <!--Building the Initial Plot-->
+        <script>
+        Plotly.d3.json('/api/pals', function(error,data){
+            if (error) return console.warn(error)
+            var data = [data]
+            console.log('Index Data:',data)
+            var layout = {
+                title:'Pet Locations',
+        font:{
+            family:'Droid Serif, serif',
+            size:15
+            },
+            geo:{
+            scope:'north america',
+            resolution:50,
+            showrivers: true,
+            rivercolor: '#fff',
+            showlakes: true,
+            lakecolor: '#fff',
+            showland: true,
+            landcolor: '#EAEAAE',
+            countrycolor: '#d3d3d3',
+            countrywidth: 4.5,
+            subunitcolor: '#d3d3d3'
+            }
+        }
+    
+            Plotly.newPlot('plot',data)
+        })
+
+        </script>
+
+        <!--Navigation-->
+        <nav class='navbar navbar-inverse'>
+            <div class='container-fluid'>
+                <div class='navbar-header'>
+                    <a class='navbar-brand' href='/'>Pet Tracker</a>
+                </div>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li><a href='/send'><span class='glyphicon glyphicon-dog'></span> Enter New Pet Location</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Header-->
+        <div class='shadow jumbotron bg-light'>
+            <h1 class='display-3 text-center'>Welcome to the Pet Tracker!</h1>
+            <p class='lead text-center'>Simple and easy way to view the location of all the Pets in the database.</p>
+            <p class ='lead text-center'><a class='btn btn-success btn-lg' href='/send' role='button'>Enter New Pet Location</a></p>
+        </div>
+
+        <!--Chart-->
+        <div id = 'plot'></div>
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+       </body>
+</html>

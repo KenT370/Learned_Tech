@@ -1,0 +1,1 @@
+This is a Heroku hosted application.  Visit https://petslocate.herokuapp.com/ to view the completed app.
